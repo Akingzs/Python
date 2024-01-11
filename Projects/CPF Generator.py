@@ -1,7 +1,7 @@
 # Coletar 9 primeiros digitos do CPF
 
-cpf = '74682489.0'
-# cpf = input('Digite os 9 primeiros digitos do CPF: ')
+# cpf = '74682489.0'
+cpf = input('Digite os 9 primeiros digitos do CPF: ')
 
 if cpf.__contains__('.'):
     cpf_corrigido = cpf.replace('.','')
