@@ -28,7 +28,7 @@ lista_de_listas_de_inteiros = [
 
 
 def find_first_duplicate(listas):
-    
+    result_list = []
     for lista in listas:
         # Verificar tamanho da lista atual
         len_list = len(lista)
@@ -41,10 +41,14 @@ def find_first_duplicate(listas):
                 temp_list.append(numero)
                 # Verifica se chegou ao ultimo numero
                 if len_list == len(temp_list):
-                    print('-1')
+                    result_list.append(-1)
             else:
                 # Caso encontre o 1 numero duplicado mostra na tela e encerra o loop da lista atual
-                print(numero)
+                result_list.append(numero)
                 break
-                
-find_first_duplicate(lista_de_listas_de_inteiros)
+    
+    
+    return result_list
+var = find_first_duplicate(lista_de_listas_de_inteiros)
+
+print(var)

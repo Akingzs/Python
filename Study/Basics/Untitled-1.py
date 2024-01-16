@@ -11,13 +11,13 @@
 # print(type(var_2))
 
 
-dicionario = {
-    'nome': 'Arthur',
-    'sobre': 'Reis'
-}
+# dicionario = {
+#     'nome': 'Arthur',
+#     'sobre': 'Reis'
+# }
 
-for chave in dicionario.keys():
-    print(chave)
+# for chave in dicionario.keys():
+#     print(chave)
 # print(dicionario.keys())
 
 # lista = ['a', 'b', 'c', 'd', 'e']
@@ -25,4 +25,15 @@ for chave in dicionario.keys():
 #     print(f'O índice é {indice} e o valor é {valor}')
 #     if indice == 3:
 #         print('Indice igual a 3')
+
+
+number = 0
+
+for number in range(10):
+    if number == 5:
+        continue    # continue here
+
+    print('Number is ' + str(number))
+
+print('Out of loop')
 
