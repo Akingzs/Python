@@ -1,3 +1,7 @@
+import sys
+
+print(sys.platform)
+
 
 
 # var_string = 'Luanna'
@@ -16,7 +20,11 @@
 #     'sobre': 'Reis'
 # }
 
-# for chave in dicionario.keys():
+# dic = {chave: 0 for chave in dicionario}
+
+# print(dic)
+
+# for chave in dicionario.values:
 #     print(chave)
 # print(dicionario.keys())
 
@@ -27,13 +35,14 @@
 #         print('Indice igual a 3')
 
 
-number = 0
+# number = 0
 
-for number in range(10):
-    if number == 5:
-        continue    # continue here
+# for number in range(10):
+#     if number == 5:
+#         continue    # continue here
 
-    print('Number is ' + str(number))
+#     print('Number is ' + str(number))
 
-print('Out of loop')
+# print('Out of loop')
+
 
