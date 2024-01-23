@@ -13,9 +13,9 @@ def zip_lists(*args):
     return zipped
 
 @criar_funcao
-def list_sum(tuple_list):
+def list_sum(lists):
     result = []
-    for item in tuple_list:
+    for item in lists:
         result.append(sum(item))
     return result
     
