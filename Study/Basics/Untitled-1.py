@@ -1,7 +1,7 @@
-import sys
+# import sys
 
-print(sys.platform)
-
+# print(sys.platform)
+p1, p2 = Produto('Caneta', 1.20), Produto('Camiseta', 20)
 
 
 # var_string = 'Luanna'

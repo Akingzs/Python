@@ -8,3 +8,7 @@
 # Você pode dar o nome que preferir para um
 # ambiente virtual, mas os mais comuns são:
 # venv env .venv .env
+
+
+
+# python -m venv (nome do ambiente usualmente é venv) 
