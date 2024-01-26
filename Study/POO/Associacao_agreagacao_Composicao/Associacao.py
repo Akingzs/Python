@@ -23,6 +23,9 @@ class Escritor:
     @ferramenta.setter
     def ferramenta(self, ferramenta):
         self._ferramenta = ferramenta  # Define a ferramenta de escrita
+    
+    def mostrar_acao(self):
+        return f'O Escritor {self.nome} esta escrevendo com {self._ferramenta.nome}'
 
 # Definindo a classe FerramentaDeEscrever
 class FerramentaDeEscrever:
@@ -38,7 +41,7 @@ escritor = Escritor('Luiz')
 
 # Criando objetos da classe FerramentaDeEscrever
 caneta = FerramentaDeEscrever('Caneta Bic')
-maquina_de_escrever = FerramentaDeEscrever('Máquina')
+maquina_de_escrever = FerramentaDeEscrever('Máquina de escrever')
 
 # Definindo a ferramenta de escrita do escritor usando associacao de classes
 escritor.ferramenta = maquina_de_escrever
@@ -49,3 +52,4 @@ print(maquina_de_escrever.escrever())
 
 # Imprimindo a ação de escrita da ferramenta do escritor
 print(escritor.ferramenta.escrever())
+print(escritor.mostrar_acao())

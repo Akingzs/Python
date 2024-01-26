@@ -1,0 +1,20 @@
+Associação: 
+É o relacionamento mais genérico entre objetos. A associação ocorre quando dois objetos são completamente independentes entre si, 
+mas eventualmente estão relacionados. Não há propriedade (ownership) nem dependência entre eles. A relação é eventual1.
+Ex: Motorista Taxi e Passageiro -> Ambos são objetos independentes e podem existir sem o outro.
+No entanto, eles podem se associar temporariamente para uma corrida de táxi.
+
+Agregação: 
+É um tipo especial de associação onde existe uma exclusividade e determinados objetos só podem se relacionar a um objeto específico. 
+É uma relação de um para muitos. Um objeto é proprietário de outros, mas não há dependência, 
+então ambos podem existir mesmo que a relação não se estabeleça.
+Ex: Considere uma Equipe de jogadores de futebol e um Jogador. Uma Equipe é composta por vários Jogadores,
+mas cada Jogador pode existir independentemente da Equipe. Se a Equipe for dissolvida, os Jogadores ainda existirão. 
+Além disso, um Jogador pode ser parte de apenas uma Equipe por vez (exclusividade), mas pode mudar de Equipe ao longo do tempo.
+
+Composição: 
+É uma forma de agregação que possui dependência entre os objetos. 
+Se o objeto principal for destruído, os objetos que o compõe não podem existir mais. 
+Na composição, o objeto “filho” não faz sentido fora do objeto "pai".
+Ex: Pense em um Carro e suas Rodas. As Rodas são parte integral do Carro - se o Carro for destruído, as Rodas também serão.
+Além disso, uma Roda não faz sentido sem o Carro a que pertence.
