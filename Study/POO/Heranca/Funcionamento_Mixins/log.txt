@@ -1,0 +1,6 @@
+Error: log error implementado / 2024-01-29 10:50:15.976384
+Sucess: log success implementado / 2024-01-29 10:50:15.976384
+Error: log error implementado / 2024-01-29 10:50:22.206263
+Sucess: log success implementado / 2024-01-29 10:50:22.208266
+Error: log error implementado / 2024-01-29 10:51:47.111987
+Sucess: log success implementado / 2024-01-29 10:51:47.111987

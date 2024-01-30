@@ -1,0 +1,4 @@
+Sucess: Galaxy S está ligado / 2024-01-29 11:12:05.685417
+Error: iPhone está desligado / 2024-01-29 11:12:05.685417
+Sucess: Galaxy S está ligado / 2024-01-29 11:15:05.425235
+Error: iPhone está desligado / 2024-01-29 11:15:46.680820
