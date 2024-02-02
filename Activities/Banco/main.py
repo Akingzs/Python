@@ -3,11 +3,14 @@
 # um banco. A ideia é que o cliente tenha uma conta (poupança ou corrente) e que
 # possa sacar/depositar nessa conta. Contas corrente tem um limite extra.
 from abc import ABC, abstractmethod
+import random
 
 class Conta(ABC):
     
     def __init__(self, limite_conta: int | float = 0) -> None:
         self._limite_conta = limite_conta
+        self._agencia = random.randint(0,1)
+        self._numero_conta = random.randint(1000,9999)
     
     @abstractmethod
     def sacar(self, valor_saque: int | float):
@@ -34,13 +37,29 @@ class Pessoa(ABC):
     def idade(self):
         return self._idade
     
+class Banco():
     
+    def __init__(self, contas:list[Conta], clientes:list[Pessoa]) -> None:
+        self._contas = contas
+        self._clientes = clientes
+        # O meu banco trabalha apenas com as contas que tem agencia 0
+        self._banco_agencia = 0    
+
+
+    # def autenticar(self):
+    #     for conta in self._contas:
+            
+        
+    #     return self._nome_banco
+
+            
+        
 class Cliente(Pessoa):
     
     def __init__(self, nome: str, idade: int, conta) -> None:
         super().__init__(nome, idade)
         self._conta = conta
-    
+
 
 class Conta_Corrente(Conta):
     
@@ -77,7 +96,12 @@ class Conta_Poupanca(Conta):
 # print(p.idade)
 
 conta_arthur = Conta_Corrente(1000)
-print(conta_arthur._limite_conta)
+conta2 = Conta_Corrente(4000)
+conta3 = Conta_Corrente(500)
+lista_contas = [conta_arthur,conta2,conta3]
+# print(conta_arthur._limite_conta)
 
 conta_arthur.sacar(200)
 conta_arthur.depositar(500)
+
+banco0 = Banco(lista_contas)
