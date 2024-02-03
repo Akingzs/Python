@@ -22,7 +22,7 @@
 
 
 class Animal:
-    def locomove(self):
+    def locomove(self) -> bool:
         pass
 
 class Peixe(Animal):
