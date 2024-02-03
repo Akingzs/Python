@@ -2,40 +2,8 @@
 # Criar um sistema bancário (extremamente simples) que tem clientes, contas e
 # um banco. A ideia é que o cliente tenha uma conta (poupança ou corrente) e que
 # possa sacar/depositar nessa conta. Contas corrente tem um limite extra.
-from abc import ABC, abstractmethod
-import random
-
-class Conta(ABC):
-    
-    def __init__(self, limite_conta: int | float = 0) -> None:
-        self._limite_conta = limite_conta
-        self._agencia = 0 #random.randint(0,1)
-        self._numero_conta = random.randint(1000,9999)
-    
-    @abstractmethod
-    def sacar(self, valor_saque: int | float):
-        self._limite_conta -= valor_saque
-        return self._limite_conta 
-    
-    @abstractmethod
-    def depositar(self, valor_deposito: int | float):
-        self._limite_conta += valor_deposito
-        return self._limite_conta 
-    
-    
-class Pessoa(ABC):
-    
-    def __init__(self, nome: str, idade:int) -> None:
-        self._nome = nome
-        self._idade = idade
-        
-    @property
-    def nome(self):
-        return self._nome
-    
-    @property
-    def idade(self):
-        return self._idade
+from conta import Conta
+from pessoa import Pessoa
     
 class Banco():
     
@@ -54,17 +22,12 @@ class Banco():
                     return True
             else:
                 print('Voce nao pode sacar nesse banco')
-        
-        
-
-            
-        
+                         
 class Cliente(Pessoa):
     
     def __init__(self, nome: str, idade: int, conta) -> None:
         super().__init__(nome, idade)
         self._conta = conta
-
 
 class Conta_Corrente(Conta):
     
@@ -105,10 +68,6 @@ lista_contas = [conta_arthur,conta2,conta3]
 
 arthur, luanna = (Pessoa('ARTHUR',24),Pessoa('LUANNA',24))
 lista_clientes = [arthur,luanna]
-# print(conta_arthur._limite_conta)
-
-# conta_arthur.sacar(200)
-# conta_arthur.depositar(500)
 
 banco0 = Banco(lista_contas,lista_clientes)
 
