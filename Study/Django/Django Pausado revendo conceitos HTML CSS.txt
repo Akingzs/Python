@@ -1,0 +1,1 @@
+Django Pausado revendo conceitos HTML CSS para voltar e poder evoluir com o desenvolvimento de sites
